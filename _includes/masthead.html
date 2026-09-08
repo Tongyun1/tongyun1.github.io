@@ -1,4 +1,10 @@
 {% include base_path %}
+<style>
+  #language-toggle > a {
+    cursor: pointer;
+    user-select: none;
+  }
+</style>
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
@@ -6,7 +12,9 @@
         <button><span class="navicon"></span></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
-            <a href="{{ base_path }}/">{{ site.title }}</a>
+            <a href="{{ base_path }}/"
+               data-lang-en="{{ site.title_en | default: site.name }}"
+               data-lang-zh="{{ site.title_zh | default: site.title }}">{{ site.title_en | default: site.name }}</a>
           </li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
@@ -15,9 +23,14 @@
               {% assign domain = base_path %}
             {% endif %}
             <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+              <a href="{{ domain }}{{ link.url }}"
+                 data-lang-en="{{ link.title_en | default: link.title }}"
+                 data-lang-zh="{{ link.title_zh | default: link.title }}">{{ link.title_en | default: link.title }}</a>
             </li>
           {% endfor %}
+          <li id="language-toggle" class="masthead__menu-item persist">
+            <a role="button" aria-label="Switch language">中文</a>
+          </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
           </li>
@@ -27,3 +40,66 @@
     </div>
   </div>
 </div>
+
+<script>
+(function () {
+  var pageTitleEn = {{ page.title_en | default: page.title | jsonify }};
+  var pageTitleZh = {{ page.title_zh | default: page.title | jsonify }};
+  var siteTitleEn = {{ site.title_en | default: site.name | jsonify }};
+  var siteTitleZh = {{ site.title_zh | default: site.title | jsonify }};
+
+  function applyLanguage(lang) {
+    var useZh = lang === 'zh';
+
+    document.documentElement.lang = useZh ? 'zh-CN' : 'en';
+
+    document.querySelectorAll('.lang-en').forEach(function (el) {
+      el.style.display = useZh ? 'none' : '';
+    });
+    document.querySelectorAll('.lang-zh').forEach(function (el) {
+      el.style.display = useZh ? '' : 'none';
+    });
+
+    document.querySelectorAll('[data-lang-en][data-lang-zh]').forEach(function (el) {
+      el.textContent = useZh ? el.getAttribute('data-lang-zh') : el.getAttribute('data-lang-en');
+    });
+
+    var toggle = document.querySelector('#language-toggle > a');
+    if (toggle) {
+      toggle.textContent = useZh ? 'English' : '中文';
+      toggle.setAttribute('aria-label', useZh ? 'Switch to English' : '切换到中文');
+    }
+
+    var currentPageTitle = useZh ? pageTitleZh : pageTitleEn;
+    var currentSiteTitle = useZh ? siteTitleZh : siteTitleEn;
+    if (currentPageTitle && currentPageTitle !== currentSiteTitle) {
+      document.title = currentPageTitle + ' - ' + currentSiteTitle;
+    } else {
+      document.title = currentSiteTitle;
+    }
+
+    try { localStorage.setItem('site-language', useZh ? 'zh' : 'en'); } catch (e) {}
+  }
+
+  function initLanguageSwitcher() {
+    var saved = 'en';
+    try { saved = localStorage.getItem('site-language') || 'en'; } catch (e) {}
+    applyLanguage(saved);
+
+    var toggle = document.querySelector('#language-toggle > a');
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        var next = document.documentElement.lang === 'zh-CN' ? 'en' : 'zh';
+        applyLanguage(next);
+      });
+    }
+  }
+
+  window.setSiteLanguage = applyLanguage;
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
+  } else {
+    initLanguageSwitcher();
+  }
+})();
+</script>
