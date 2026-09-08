@@ -1,56 +1,169 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Mingming Zhang | 张明鸣"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+<div class="language-switcher" style="text-align:right; margin: 0 0 1.2rem 0;">
+  <button id="language-toggle" type="button" aria-label="Switch language" style="padding:0.45rem 0.85rem; border:1px solid #bdbdbd; border-radius:6px; background:#fff; cursor:pointer; font-size:0.9rem;">中文</button>
+</div>
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+<div id="content-en">
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+## About Me
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your Markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the Markdown files! You can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+I am **Mingming Zhang (张明鸣)**, a master's student in the School of Cyber Science and Engineering at **Wuhan University**, where I also completed my bachelor's degree through the Ziqiang Honors Program. I am expected to graduate in June 2027.
 
-For those users that need more advanced functionality, the template also supports the following popular tools:
-- [MathJax](https://www.mathjax.org/) for mathematical equations
-- [Mermaid](https://mermaid.js.org/) for diagraming
-- [Plotly](https://plotly.com/javascript/) for plotting
+My research interests lie at the intersection of **reinforcement learning, large language models, generative recommendation, and multimodal learning**. I am particularly interested in learning decision-making policies from imperfect offline data, controllable and safe exploration, and applying foundation models to sequential recommendation and content understanding.
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](https://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+Since March 2025, I have been an algorithm intern at **Alibaba Taobao & Tmall Group**, working on generative auto-bidding and reinforcement learning. I have led end-to-end algorithm development for multiple advertising scenarios, including generative decision models, safe exploration, and constrained reinforcement learning. The deployed systems achieved more than **10% GMV uplift** in one major iteration, and the work has led to papers at KDD and SIGIR as well as ongoing research.
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+## Research Interests
 
-Create content & metadata
-------
-For site content, there is one Markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a Markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each Markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+- Reinforcement Learning and Offline RL
+- Large Language Models and Post-training
+- Generative Recommendation and Sequential Decision Making
+- Multimodal Large Language Models and Content Understanding
 
-**Markdown generator**
+## Selected Publications
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
+**HVGuard: Utilizing Multimodal Large Language Models for Hateful Video Detection**  
+*EMNLP 2025, Main Conference — First Author*  
+A reasoning-oriented hateful-video detection framework based on multimodal large language models, chain-of-thought reasoning, and mixture-of-experts fusion.
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+**Q-Regularized Generative Auto-Bidding: From Suboptimal Trajectories to Optimal Policies**  
+*KDD 2026, Main Conference — First Author*  
+A Q-regularized generative auto-bidding framework that integrates double-Q learning with Decision Transformer to improve policies from suboptimal historical trajectories.
 
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
+**Generative Auto-Bidding with Unified Modeling and Exploration**  
+*SIGIR 2026, Oral — First Author*  
+A unified generative auto-bidding framework that combines Decision Transformer, inverse dynamics modeling, and Q-value-guided action selection for effective and safe exploration.
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+**Decomposed Critic for Constrained Generative Auto-Bidding**  
+*Submitted to WSDM 2026 — First Author*  
+A constrained generative reinforcement learning framework that decomposes reward and constraint critics and injects constraint knowledge into both training and inference.
+
+**SkyWalker: Random-Walk Semantic IDs for E-commerce**  
+*Submitted to KDD 2027 — First Author*  
+A new semantic-ID generation paradigm for generative recommendation, designed to improve code utilization and generalization across downstream e-commerce tasks.
+
+[View all publications →](/publications/)
+
+## Projects
+
+**[From Minimind to More](https://github.com/Tongyun1/from-minimind-to-more)**  
+A detailed open-source tutorial that explains how to train a language model from scratch, covering data processing, model architecture, training algorithms, and implementation details. **1.6K+ GitHub Stars**.
+
+**[SuperAcademicAgent](https://github.com/Tongyun1/SuperAcademicAgent)**  
+An autonomous academic-search agent with task planning, exploration, and tool use.
+
+[View projects →](/projects/)
+
+## Experience
+
+**Alibaba Taobao & Tmall Group — Algorithm Intern**  
+*Mar. 2025 – Present*  
+Research and engineering on generative auto-bidding, reinforcement learning, safe exploration, and constrained sequential decision making.
+
+**Wuhan University — M.S. in Cyber Science and Engineering**  
+*Sep. 2024 – Present*
+
+**Wuhan University — B.S. in Cyber Science and Engineering**  
+*Sep. 2020 – Jun. 2024*
+
+</div>
+
+<div id="content-zh" style="display:none;">
+
+## 关于我
+
+我是**张明鸣（Mingming Zhang）**，现为**武汉大学国家网络空间安全学院**硕士研究生，本科同样就读于武汉大学自强实验班，预计于 2027 年 6 月毕业。
+
+我的研究兴趣主要包括**强化学习、大语言模型、生成式推荐与多模态学习**。我尤其关注如何从次优离线数据中学习更优决策策略、如何实现可控且安全的探索，以及如何将 Foundation Model 应用于序列推荐与内容理解任务。
+
+自 2025 年 3 月起，我在**阿里巴巴淘天集团**担任算法实习生，主要从事生成式自动出价与强化学习研究。我主导完成了多个广告场景的端到端算法迭代，包括生成式决策模型、安全探索和复杂约束下的强化学习。在其中一次主要版本迭代中，线上实现了超过 **10% 的 GMV 提升**；相关成果已产出 KDD、SIGIR 论文，并仍在持续研究中。
+
+## 研究方向
+
+- 强化学习与离线强化学习
+- 大语言模型与后训练
+- 生成式推荐与序列决策
+- 多模态大语言模型与内容理解
+
+## 代表性论文
+
+**HVGuard: Utilizing Multimodal Large Language Models for Hateful Video Detection**  
+*EMNLP 2025 Main，第一作者*  
+提出基于多模态大语言模型的推理式仇恨视频检测框架，结合思维链推理与混合专家网络增强跨模态交互和隐性仇恨识别。
+
+**Q-Regularized Generative Auto-Bidding: From Suboptimal Trajectories to Optimal Policies**  
+*KDD 2026 Main，第一作者*  
+将双 Q 学习的价值正则化融入 Decision Transformer，从历史次优轨迹中学习更优自动出价策略，并利用 Q 值指导安全探索。
+
+**Generative Auto-Bidding with Unified Modeling and Exploration**  
+*SIGIR 2026 Oral，第一作者*  
+提出统一的生成式自动出价框架，结合 Decision Transformer、逆动力学模型与 Q 值动作筛选，在探索性和安全性之间取得平衡。
+
+**Decomposed Critic for Constrained Generative Auto-Bidding**  
+*投稿 WSDM 2026，第一作者*  
+面向复杂约束的生成式强化学习方法，通过解耦 reward 与 constraint critic，并在训练和推理阶段注入约束知识。
+
+**SkyWalker: Random-Walk Semantic IDs for E-commerce**  
+*投稿 KDD 2027，第一作者*  
+面向生成式推荐提出新的 Semantic ID 构建范式，提升码字利用效率，并增强在不同电商下游任务中的泛化能力。
+
+[查看全部论文 →](/publications/)
+
+## 项目
+
+**[From Minimind to More](https://github.com/Tongyun1/from-minimind-to-more)**  
+从零训练大模型项目的系统性开源解析，覆盖数据处理、模型架构、训练算法与代码实现。目前拥有 **1.6K+ GitHub Stars**。
+
+**[SuperAcademicAgent](https://github.com/Tongyun1/SuperAcademicAgent)**  
+具备自主规划、自主探索与工具调用能力的学术搜索 Agent。
+
+[查看项目 →](/projects/)
+
+## 经历
+
+**阿里巴巴淘天集团 — 算法实习生**  
+*2025.03 – 至今*  
+研究方向包括生成式自动出价、强化学习、安全探索与复杂约束下的序列决策。
+
+**武汉大学 — 网络空间安全硕士**  
+*2024.09 – 至今*
+
+**武汉大学 — 网络空间安全本科**  
+*2020.09 – 2024.06*
+
+</div>
+
+<script>
+(function () {
+  const button = document.getElementById('language-toggle');
+  const en = document.getElementById('content-en');
+  const zh = document.getElementById('content-zh');
+  if (!button || !en || !zh) return;
+
+  function setLanguage(lang) {
+    const useZh = lang === 'zh';
+    en.style.display = useZh ? 'none' : 'block';
+    zh.style.display = useZh ? 'block' : 'none';
+    button.textContent = useZh ? 'English' : '中文';
+    button.setAttribute('aria-label', useZh ? 'Switch to English' : '切换到中文');
+    document.documentElement.lang = useZh ? 'zh-CN' : 'en';
+    try { localStorage.setItem('homepage-language', useZh ? 'zh' : 'en'); } catch (e) {}
+  }
+
+  let saved = 'en';
+  try { saved = localStorage.getItem('homepage-language') || 'en'; } catch (e) {}
+  setLanguage(saved);
+
+  button.addEventListener('click', function () {
+    setLanguage(zh.style.display === 'none' ? 'zh' : 'en');
+  });
+})();
+</script>
