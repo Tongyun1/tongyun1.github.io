@@ -5,32 +5,26 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<h2>Conference Papers</h2>
 
-{% include base_path %}
+<p><strong>HVGuard: Utilizing Multimodal Large Language Models for Hateful Video Detection</strong><br>
+<em>EMNLP 2025, Main Conference</em> — First Author<br>
+A reasoning-oriented framework for hateful-video detection using multimodal large language models, chain-of-thought reasoning, and mixture-of-experts fusion.</p>
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<p><strong>Q-Regularized Generative Auto-Bidding: From Suboptimal Trajectories to Optimal Policies</strong><br>
+<em>KDD 2026, Main Conference</em> — First Author<br>
+A Q-regularized generative auto-bidding framework that integrates double-Q learning with Decision Transformer to improve policies from suboptimal historical trajectories.</p>
 
+<p><strong>Generative Auto-Bidding with Unified Modeling and Exploration</strong><br>
+<em>SIGIR 2026, Oral</em> — First Author<br>
+A unified generative auto-bidding framework combining Decision Transformer, inverse dynamics modeling, and Q-value-guided action selection for effective and safe exploration.</p>
 
+<h2>Under Review / Submitted</h2>
 
+<p><strong>Decomposed Critic for Constrained Generative Auto-Bidding</strong><br>
+<em>Submitted to WSDM 2026</em> — First Author<br>
+A constrained generative reinforcement learning framework that decomposes reward and constraint critics and injects constraint knowledge into both training and inference.</p>
+
+<p><strong>SkyWalker: Random-Walk Semantic IDs for E-commerce</strong><br>
+<em>Submitted to KDD 2027</em> — First Author<br>
+A new semantic-ID generation paradigm for generative recommendation, designed to improve code utilization and generalization across downstream e-commerce tasks.</p>
