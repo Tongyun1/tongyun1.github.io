@@ -7,58 +7,66 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+# Mingming Zhang (张明鸣)
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+Master's student at Wuhan University working on reinforcement learning, large language models, generative recommendation, and multimodal learning.
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+## Education
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+**Wuhan University** — M.S., School of Cyber Science and Engineering  
+*Sep. 2024 – Present · Expected Jun. 2027*  
+Ziqiang Honors Program
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+**Wuhan University** — B.S., School of Cyber Science and Engineering  
+*Sep. 2020 – Jun. 2024*  
+Ziqiang Honors Program
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+## Experience
+
+**Alibaba Taobao & Tmall Group — Algorithm Intern**  
+*Mar. 2025 – Present*
+
+- Led end-to-end algorithm development for multiple advertising auto-bidding scenarios.
+- Developed generative decision models and reinforcement-learning methods for action exploration and safety constraints.
+- Delivered multiple production iterations; one major iteration achieved **+10.12% advertising GMV** and **+10.29% advertising spend** online.
+- Research outcomes include papers at KDD and SIGIR and ongoing work on constrained generative auto-bidding.
+
+## Publications
+
+**HVGuard: Utilizing Multimodal Large Language Models for Hateful Video Detection**  
+EMNLP 2025, Main Conference — First Author
+
+**Q-Regularized Generative Auto-Bidding: From Suboptimal Trajectories to Optimal Policies**  
+KDD 2026, Main Conference — First Author
+
+**Generative Auto-Bidding with Unified Modeling and Exploration**  
+SIGIR 2026, Oral — First Author
+
+**Decomposed Critic for Constrained Generative Auto-Bidding**  
+Submitted to WSDM 2026 — First Author
+
+**SkyWalker: Random-Walk Semantic IDs for E-commerce**  
+Submitted to KDD 2027 — First Author
+
+## Projects
+
+**[From Minimind to More](https://github.com/Tongyun1/from-minimind-to-more)** — Sole contributor  
+A detailed open-source tutorial explaining language-model training from scratch, including data processing, architecture, training algorithms, and implementation. **1.6K+ GitHub Stars**.
+
+**[SuperAcademicAgent](https://github.com/Tongyun1/SuperAcademicAgent)** — Major contributor  
+An autonomous academic-search agent with planning, exploration, and tool use.
+
+**CVR Prediction with Feature Crossing and Contrastive Learning** — Major contributor  
+National First Prize, China Graduate AI Innovation Competition.
+
+## Research Interests
+
+- Reinforcement Learning and Offline RL
+- Large Language Models and Post-training
+- Generative Recommendation and Sequential Decision Making
+- Multimodal Large Language Models and Content Understanding
+
+## Contact
+
+- GitHub: [Tongyun1](https://github.com/Tongyun1)
+- Email: 528062420@qq.com
