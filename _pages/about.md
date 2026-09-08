@@ -20,6 +20,8 @@ redirect_from:
 .pub-title { font-weight: 650; line-height: 1.45; }
 .pub-meta { color: #666; margin-top: .18rem; font-size: .94rem; }
 .section-link { margin-top: .3rem; }
+.section-link a { text-decoration: none; font-weight: 600; }
+.section-link a:hover { text-decoration: underline; }
 @media (max-width: 600px) { .home-hero h1 { font-size: 1.7rem; } }
 </style>
 
@@ -71,7 +73,7 @@ Since March 2025, I have been an algorithm intern at **Alibaba Taobao & Tmall Gr
   <div class="pub-meta"><strong>SIGIR 2026 Oral</strong> · First Author</div>
 </div>
 
-<div class="section-link">[View all publications →](/publications/)</div>
+<div class="section-link"><a href="/publications/">View all publications →</a></div>
 
 ## Projects
 
@@ -85,7 +87,7 @@ Since March 2025, I have been an algorithm intern at **Alibaba Taobao & Tmall Gr
   An academic-search agent with autonomous planning, exploration, and tool use.
 </div>
 
-<div class="section-link">[View projects →](/projects/)</div>
+<div class="section-link"><a href="/projects/">View projects →</a></div>
 
 ## Education & Experience
 
@@ -144,7 +146,7 @@ Since March 2025, I have been an algorithm intern at **Alibaba Taobao & Tmall Gr
   <div class="pub-meta"><strong>SIGIR 2026 Oral</strong> · 第一作者</div>
 </div>
 
-<div class="section-link">[查看全部论文 →](/publications/)</div>
+<div class="section-link"><a href="/publications/">查看全部论文 →</a></div>
 
 ## 项目
 
@@ -158,7 +160,7 @@ Since March 2025, I have been an algorithm intern at **Alibaba Taobao & Tmall Gr
   具备自主规划、自主探索与工具调用能力的学术搜索 Agent。
 </div>
 
-<div class="section-link">[查看项目 →](/projects/)</div>
+<div class="section-link"><a href="/projects/">查看项目 →</a></div>
 
 ## 教育与经历
 
