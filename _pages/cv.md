@@ -41,6 +41,15 @@ redirect_from:
   <p><strong>Generative Auto-Bidding with Unified Modeling and Exploration</strong><br>
   SIGIR 2026 Oral — First Author</p>
 
+  <h3>Under Review</h3>
+  <p><strong>Project A</strong><br>
+  WSDM 2027 — Under Review — First Author<br>
+  Research direction: constrained generative auto-bidding and reinforcement learning.</p>
+
+  <p><strong>Project B</strong><br>
+  KDD 2027 — Under Review — First Author<br>
+  Research direction: semantic IDs and generative recommendation for e-commerce.</p>
+
   <h2>Projects</h2>
   <p><strong><a href="https://github.com/Tongyun1/from-minimind-to-more">From Minimind to More</a></strong> — Sole contributor<br>
   A detailed open-source tutorial explaining language-model training from scratch, including data processing, model architecture, training algorithms, and implementation details. <strong>1.6K+ GitHub Stars</strong>.</p>
@@ -97,6 +106,15 @@ redirect_from:
 
   <p><strong>Generative Auto-Bidding with Unified Modeling and Exploration</strong><br>
   SIGIR 2026 Oral — 第一作者</p>
+
+  <h3>投稿中</h3>
+  <p><strong>Project A</strong><br>
+  WSDM 2027 — 审稿中 — 第一作者<br>
+  研究方向：复杂约束下的生成式自动出价与强化学习。</p>
+
+  <p><strong>Project B</strong><br>
+  KDD 2027 — 审稿中 — 第一作者<br>
+  研究方向：面向电商生成式推荐的 Semantic ID。</p>
 
   <h2>项目</h2>
   <p><strong><a href="https://github.com/Tongyun1/from-minimind-to-more">From Minimind to More</a></strong> — 独立贡献者<br>
