@@ -9,15 +9,15 @@ redirect_from:
 
 # Mingming Zhang (张明鸣)
 
-Master's student at Wuhan University working on reinforcement learning, large language models, generative recommendation, and multimodal learning.
+Master's student at Wuhan University. Research interests include reinforcement learning, sequential decision making, generative recommendation, and multimodal large language models.
 
 ## Education
 
-**Wuhan University** — M.S., School of Cyber Science and Engineering  
+**Wuhan University** — Master's Student  
 *Sep. 2024 – Present · Expected Jun. 2027*  
 Ziqiang Honors Program
 
-**Wuhan University** — B.S., School of Cyber Science and Engineering  
+**Wuhan University** — Bachelor's Degree  
 *Sep. 2020 – Jun. 2024*  
 Ziqiang Honors Program
 
@@ -26,10 +26,9 @@ Ziqiang Honors Program
 **Alibaba Taobao & Tmall Group — Algorithm Intern**  
 *Mar. 2025 – Present*
 
-- Led end-to-end algorithm development for multiple advertising auto-bidding scenarios.
-- Developed generative decision models and reinforcement-learning methods for action exploration and safety constraints.
-- Delivered multiple production iterations; one major iteration achieved **+10.12% advertising GMV** and **+10.29% advertising spend** online.
-- Research outcomes include papers at KDD and SIGIR and ongoing work on constrained generative auto-bidding.
+- Worked on generative decision models and reinforcement-learning methods for auto-bidding.
+- Developed methods related to action exploration and constrained sequential decision making.
+- Research outcomes include accepted papers at KDD and SIGIR.
 
 ## Publications
 
@@ -42,29 +41,23 @@ KDD 2026, Main Conference — First Author
 **Generative Auto-Bidding with Unified Modeling and Exploration**  
 SIGIR 2026, Oral — First Author
 
-**Decomposed Critic for Constrained Generative Auto-Bidding**  
-Submitted to WSDM 2026 — First Author
-
-**SkyWalker: Random-Walk Semantic IDs for E-commerce**  
-Submitted to KDD 2027 — First Author
-
 ## Projects
 
 **[From Minimind to More](https://github.com/Tongyun1/from-minimind-to-more)** — Sole contributor  
-A detailed open-source tutorial explaining language-model training from scratch, including data processing, architecture, training algorithms, and implementation. **1.6K+ GitHub Stars**.
+A detailed open-source tutorial explaining language-model training from scratch, including data processing, model architecture, training algorithms, and implementation details. **1.6K+ GitHub Stars**.
 
 **[SuperAcademicAgent](https://github.com/Tongyun1/SuperAcademicAgent)** — Major contributor  
-An autonomous academic-search agent with planning, exploration, and tool use.
+An academic-search agent with autonomous planning, exploration, and tool use.
 
 **CVR Prediction with Feature Crossing and Contrastive Learning** — Major contributor  
 National First Prize, China Graduate AI Innovation Competition.
 
 ## Research Interests
 
-- Reinforcement Learning and Offline RL
-- Large Language Models and Post-training
-- Generative Recommendation and Sequential Decision Making
-- Multimodal Large Language Models and Content Understanding
+- Reinforcement Learning
+- Sequential Decision Making
+- Generative Recommendation
+- Multimodal Large Language Models
 
 ## Contact
 
