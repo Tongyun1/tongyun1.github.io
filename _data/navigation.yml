@@ -1,12 +1,20 @@
 main:
   - title: "Home"
+    title_en: "Home"
+    title_zh: "首页"
     url: /
 
   - title: "Publications"
+    title_en: "Publications"
+    title_zh: "论文"
     url: /publications/
 
   - title: "Projects"
+    title_en: "Projects"
+    title_zh: "项目"
     url: /projects/
 
   - title: "CV"
+    title_en: "CV"
+    title_zh: "简历"
     url: /cv/
