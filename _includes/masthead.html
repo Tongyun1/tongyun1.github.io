@@ -47,6 +47,19 @@
   var pageTitleZh = {{ page.title_zh | default: page.title | jsonify }};
   var siteTitleEn = {{ site.title_en | default: site.name | jsonify }};
   var siteTitleZh = {{ site.title_zh | default: site.title | jsonify }};
+  var authorNameEn = {{ site.author.name_en | default: site.author.name | jsonify }};
+  var authorNameZh = {{ site.author.name_zh | default: site.author.name | jsonify }};
+  var authorBioEn = {{ site.author.bio_en | default: site.author.bio | jsonify }};
+  var authorBioZh = {{ site.author.bio_zh | default: site.author.bio | jsonify }};
+  var employerEn = {{ site.author.employer_en | default: site.author.employer | jsonify }};
+  var employerZh = {{ site.author.employer_zh | default: site.author.employer | jsonify }};
+
+  function replaceIconLabel(iconSelector, text) {
+    var icon = document.querySelector(iconSelector);
+    if (!icon || !icon.parentElement) return;
+    var parent = icon.parentElement;
+    parent.innerHTML = icon.outerHTML + text;
+  }
 
   function applyLanguage(lang) {
     var useZh = lang === 'zh';
@@ -63,6 +76,20 @@
     document.querySelectorAll('[data-lang-en][data-lang-zh]').forEach(function (el) {
       el.textContent = useZh ? el.getAttribute('data-lang-zh') : el.getAttribute('data-lang-en');
     });
+
+    var authorName = document.querySelector('.author__name');
+    if (authorName) authorName.textContent = useZh ? authorNameZh : authorNameEn;
+
+    var authorBio = document.querySelector('.author__bio');
+    if (authorBio) authorBio.textContent = useZh ? authorBioZh : authorBioEn;
+
+    if (employerEn || employerZh) {
+      replaceIconLabel('.fa-building-columns', useZh ? employerZh : employerEn);
+    }
+    replaceIconLabel('.fa-envelope', useZh ? '邮箱' : 'Email');
+
+    var followButton = document.querySelector('.author__urls-wrapper > button');
+    if (followButton) followButton.textContent = useZh ? '关注' : 'Follow';
 
     var toggle = document.querySelector('#language-toggle > a');
     if (toggle) {
