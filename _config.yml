@@ -7,6 +7,8 @@
 locale                   : "en-US"
 site_theme               : "default"
 title                    : "Mingming Zhang | 张明鸣"
+title_en                 : "Mingming Zhang"
+title_zh                 : "张明鸣"
 title_separator          : "-"
 name                     : &name "Mingming Zhang"
 description              : &description "Mingming Zhang's academic homepage — reinforcement learning, sequential decision making, generative recommendation, and multimodal large language models."
@@ -18,10 +20,16 @@ repository               : "Tongyun1/tongyun1.github.io"
 author:
   avatar           : "https://avatars.githubusercontent.com/u/118033038?v=4"
   name             : "Mingming Zhang | 张明鸣"
+  name_en          : "Mingming Zhang"
+  name_zh          : "张明鸣"
   pronouns         :
   bio              : "M.S. student at Wuhan University. Research interests: reinforcement learning, sequential decision making, generative recommendation, and multimodal large language models."
+  bio_en           : "M.S. student at Wuhan University. Research interests: reinforcement learning, sequential decision making, generative recommendation, and multimodal large language models."
+  bio_zh           : "武汉大学硕士研究生。研究方向包括强化学习、序列决策、生成式推荐与多模态大语言模型。"
   location         :
   employer         : "Wuhan University"
+  employer_en      : "Wuhan University"
+  employer_zh      : "武汉大学"
   uri              :
   email            : "528062420@qq.com"
 
