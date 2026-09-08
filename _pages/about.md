@@ -27,7 +27,7 @@ redirect_from:
   <button id="language-toggle" type="button" aria-label="Switch language">中文</button>
 </div>
 
-<div id="content-en">
+<div id="content-en" markdown="1">
 
 <div class="home-hero">
   <h1>Mingming Zhang <span style="font-weight:400;">张明鸣</span></h1>
@@ -100,7 +100,7 @@ Since March 2025, I have been an algorithm intern at **Alibaba Taobao & Tmall Gr
 
 </div>
 
-<div id="content-zh" style="display:none;">
+<div id="content-zh" markdown="1" style="display:none;">
 
 <div class="home-hero">
   <h1>张明鸣 <span style="font-weight:400;">Mingming Zhang</span></h1>
