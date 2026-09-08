@@ -18,6 +18,7 @@ redirect_from:
 .pub-item, .project-item, .news-item { margin: 0 0 1.15rem; }
 .pub-title { font-weight: 650; line-height: 1.45; }
 .pub-meta { color: #666; margin-top: .18rem; font-size: .94rem; }
+.pub-desc { margin-top: .28rem; font-size: .95rem; }
 .section-link { margin-top: .3rem; }
 .section-link a { text-decoration: none; font-weight: 600; }
 .section-link a:hover { text-decoration: underline; }
@@ -59,6 +60,19 @@ redirect_from:
     <div class="pub-title">Generative Auto-Bidding with Unified Modeling and Exploration</div>
     <div class="pub-meta"><strong>SIGIR 2026 Oral</strong> · First Author</div>
   </div>
+
+  <h3>Under Review</h3>
+  <div class="pub-item">
+    <div class="pub-title">Project A</div>
+    <div class="pub-meta"><strong>WSDM 2027</strong> · Under Review · First Author</div>
+    <div class="pub-desc">Research direction: constrained generative auto-bidding and reinforcement learning.</div>
+  </div>
+  <div class="pub-item">
+    <div class="pub-title">Project B</div>
+    <div class="pub-meta"><strong>KDD 2027</strong> · Under Review · First Author</div>
+    <div class="pub-desc">Research direction: semantic IDs and generative recommendation for e-commerce.</div>
+  </div>
+
   <div class="section-link"><a href="/publications/">View all publications →</a></div>
 
   <h2>Projects</h2>
@@ -113,6 +127,19 @@ redirect_from:
     <div class="pub-title">Generative Auto-Bidding with Unified Modeling and Exploration</div>
     <div class="pub-meta"><strong>SIGIR 2026 Oral</strong> · 第一作者</div>
   </div>
+
+  <h3>投稿中</h3>
+  <div class="pub-item">
+    <div class="pub-title">Project A</div>
+    <div class="pub-meta"><strong>WSDM 2027</strong> · 审稿中 · 第一作者</div>
+    <div class="pub-desc">研究方向：复杂约束下的生成式自动出价与强化学习。</div>
+  </div>
+  <div class="pub-item">
+    <div class="pub-title">Project B</div>
+    <div class="pub-meta"><strong>KDD 2027</strong> · 审稿中 · 第一作者</div>
+    <div class="pub-desc">研究方向：面向电商生成式推荐的 Semantic ID。</div>
+  </div>
+
   <div class="section-link"><a href="/publications/">查看全部论文 →</a></div>
 
   <h2>项目</h2>
