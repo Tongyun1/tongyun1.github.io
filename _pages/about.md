@@ -7,136 +7,168 @@ redirect_from:
   - /about.html
 ---
 
-<div class="language-switcher" style="text-align:right; margin: 0 0 1.2rem 0;">
-  <button id="language-toggle" type="button" aria-label="Switch language" style="padding:0.45rem 0.85rem; border:1px solid #bdbdbd; border-radius:6px; background:#fff; cursor:pointer; font-size:0.9rem;">中文</button>
+<style>
+.home-hero { margin: .2rem 0 1.8rem; }
+.home-hero h1 { margin-bottom: .35rem; font-size: 2rem; }
+.home-subtitle { margin: 0 0 1rem; color: #666; font-size: 1.05rem; line-height: 1.55; }
+.research-tags { display: flex; flex-wrap: wrap; gap: .45rem; margin: .8rem 0 0; }
+.research-tag { display: inline-block; padding: .28rem .62rem; border-radius: 999px; background: #f3f4f6; font-size: .88rem; }
+.language-switcher { display: flex; justify-content: flex-end; margin: 0 0 .8rem; }
+#language-toggle { padding: .42rem .8rem; border: 1px solid #c9cdd2; border-radius: 999px; background: transparent; cursor: pointer; font-size: .88rem; }
+#language-toggle:hover { background: #f5f5f5; }
+.pub-item, .project-item, .news-item { margin: 0 0 1.15rem; }
+.pub-title { font-weight: 650; line-height: 1.45; }
+.pub-meta { color: #666; margin-top: .18rem; font-size: .94rem; }
+.section-link { margin-top: .3rem; }
+@media (max-width: 600px) { .home-hero h1 { font-size: 1.7rem; } }
+</style>
+
+<div class="language-switcher">
+  <button id="language-toggle" type="button" aria-label="Switch language">中文</button>
 </div>
 
 <div id="content-en">
 
-## About Me
+<div class="home-hero">
+  <h1>Mingming Zhang <span style="font-weight:400;">张明鸣</span></h1>
+  <p class="home-subtitle">Master's student at Wuhan University · Reinforcement Learning · Generative Recommendation · Multimodal Large Language Models</p>
+  <div class="research-tags">
+    <span class="research-tag">Reinforcement Learning</span>
+    <span class="research-tag">Sequential Decision Making</span>
+    <span class="research-tag">Generative Recommendation</span>
+    <span class="research-tag">Multimodal LLMs</span>
+  </div>
+</div>
 
-I am **Mingming Zhang (张明鸣)**, a master's student in the School of Cyber Science and Engineering at **Wuhan University**, where I also completed my bachelor's degree through the Ziqiang Honors Program. I am expected to graduate in June 2027.
+## About
 
-My research interests lie at the intersection of **reinforcement learning, large language models, generative recommendation, and multimodal learning**. I am particularly interested in learning decision-making policies from imperfect offline data, controllable and safe exploration, and applying foundation models to sequential recommendation and content understanding.
+I am a master's student at **Wuhan University**, where I also completed my bachelor's degree through the Ziqiang Honors Program. I expect to graduate in June 2027.
 
-Since March 2025, I have been an algorithm intern at **Alibaba Taobao & Tmall Group**, working on generative auto-bidding and reinforcement learning. I have led end-to-end algorithm development for multiple advertising scenarios, including generative decision models, safe exploration, and constrained reinforcement learning. The deployed systems achieved more than **10% GMV uplift** in one major iteration, and the work has led to papers at KDD and SIGIR as well as ongoing research.
+My research focuses on **reinforcement learning, sequential decision making, generative recommendation, and multimodal large language models**. I am interested in learning better policies from imperfect historical data, improving exploration in sequential decision problems, and using foundation models for recommendation and multimodal content understanding.
 
-## Research Interests
+Since March 2025, I have been an algorithm intern at **Alibaba Taobao & Tmall Group**, working on generative decision models and reinforcement-learning methods for auto-bidding. Related research has resulted in accepted papers at KDD and SIGIR.
 
-- Reinforcement Learning and Offline RL
-- Large Language Models and Post-training
-- Generative Recommendation and Sequential Decision Making
-- Multimodal Large Language Models and Content Understanding
+## News
+
+<div class="news-item"><strong>2026</strong> · Our work on generative auto-bidding was accepted to <strong>SIGIR 2026</strong> as an <strong>Oral</strong> paper.</div>
+<div class="news-item"><strong>2026</strong> · Our work on Q-regularized generative auto-bidding was accepted to <strong>KDD 2026</strong>.</div>
+<div class="news-item"><strong>2025</strong> · Our work on multimodal hateful-video detection was accepted to <strong>EMNLP 2025 Main Conference</strong>.</div>
 
 ## Selected Publications
 
-**HVGuard: Utilizing Multimodal Large Language Models for Hateful Video Detection**  
-*EMNLP 2025, Main Conference — First Author*  
-A reasoning-oriented hateful-video detection framework based on multimodal large language models, chain-of-thought reasoning, and mixture-of-experts fusion.
+<div class="pub-item">
+  <div class="pub-title">HVGuard: Utilizing Multimodal Large Language Models for Hateful Video Detection</div>
+  <div class="pub-meta"><strong>EMNLP 2025 Main Conference</strong> · First Author</div>
+</div>
 
-**Q-Regularized Generative Auto-Bidding: From Suboptimal Trajectories to Optimal Policies**  
-*KDD 2026, Main Conference — First Author*  
-A Q-regularized generative auto-bidding framework that integrates double-Q learning with Decision Transformer to improve policies from suboptimal historical trajectories.
+<div class="pub-item">
+  <div class="pub-title">Q-Regularized Generative Auto-Bidding: From Suboptimal Trajectories to Optimal Policies</div>
+  <div class="pub-meta"><strong>KDD 2026 Main Conference</strong> · First Author</div>
+</div>
 
-**Generative Auto-Bidding with Unified Modeling and Exploration**  
-*SIGIR 2026, Oral — First Author*  
-A unified generative auto-bidding framework that combines Decision Transformer, inverse dynamics modeling, and Q-value-guided action selection for effective and safe exploration.
+<div class="pub-item">
+  <div class="pub-title">Generative Auto-Bidding with Unified Modeling and Exploration</div>
+  <div class="pub-meta"><strong>SIGIR 2026 Oral</strong> · First Author</div>
+</div>
 
-**Decomposed Critic for Constrained Generative Auto-Bidding**  
-*Submitted to WSDM 2026 — First Author*  
-A constrained generative reinforcement learning framework that decomposes reward and constraint critics and injects constraint knowledge into both training and inference.
-
-**SkyWalker: Random-Walk Semantic IDs for E-commerce**  
-*Submitted to KDD 2027 — First Author*  
-A new semantic-ID generation paradigm for generative recommendation, designed to improve code utilization and generalization across downstream e-commerce tasks.
-
-[View all publications →](/publications/)
+<div class="section-link">[View all publications →](/publications/)</div>
 
 ## Projects
 
-**[From Minimind to More](https://github.com/Tongyun1/from-minimind-to-more)**  
-A detailed open-source tutorial that explains how to train a language model from scratch, covering data processing, model architecture, training algorithms, and implementation details. **1.6K+ GitHub Stars**.
+<div class="project-item">
+  <strong><a href="https://github.com/Tongyun1/from-minimind-to-more">From Minimind to More</a></strong><br>
+  A detailed open-source tutorial for understanding and training a language model from scratch, covering data processing, model architecture, training algorithms, and implementation details. <strong>1.6K+ GitHub Stars</strong>.
+</div>
 
-**[SuperAcademicAgent](https://github.com/Tongyun1/SuperAcademicAgent)**  
-An autonomous academic-search agent with task planning, exploration, and tool use.
+<div class="project-item">
+  <strong><a href="https://github.com/Tongyun1/SuperAcademicAgent">SuperAcademicAgent</a></strong><br>
+  An academic-search agent with autonomous planning, exploration, and tool use.
+</div>
 
-[View projects →](/projects/)
+<div class="section-link">[View projects →](/projects/)</div>
 
-## Experience
+## Education & Experience
 
 **Alibaba Taobao & Tmall Group — Algorithm Intern**  
-*Mar. 2025 – Present*  
-Research and engineering on generative auto-bidding, reinforcement learning, safe exploration, and constrained sequential decision making.
+*Mar. 2025 – Present*
 
-**Wuhan University — M.S. in Cyber Science and Engineering**  
-*Sep. 2024 – Present*
+**Wuhan University — Master's Student**  
+*Sep. 2024 – Present · Expected Jun. 2027*
 
-**Wuhan University — B.S. in Cyber Science and Engineering**  
+**Wuhan University — Bachelor's Degree**  
 *Sep. 2020 – Jun. 2024*
 
 </div>
 
 <div id="content-zh" style="display:none;">
 
+<div class="home-hero">
+  <h1>张明鸣 <span style="font-weight:400;">Mingming Zhang</span></h1>
+  <p class="home-subtitle">武汉大学硕士研究生 · 强化学习 · 生成式推荐 · 多模态大语言模型</p>
+  <div class="research-tags">
+    <span class="research-tag">强化学习</span>
+    <span class="research-tag">序列决策</span>
+    <span class="research-tag">生成式推荐</span>
+    <span class="research-tag">多模态大语言模型</span>
+  </div>
+</div>
+
 ## 关于我
 
-我是**张明鸣（Mingming Zhang）**，现为**武汉大学国家网络空间安全学院**硕士研究生，本科同样就读于武汉大学自强实验班，预计于 2027 年 6 月毕业。
+我是**武汉大学**硕士研究生，本科同样就读于武汉大学自强实验班，预计于 2027 年 6 月毕业。
 
-我的研究兴趣主要包括**强化学习、大语言模型、生成式推荐与多模态学习**。我尤其关注如何从次优离线数据中学习更优决策策略、如何实现可控且安全的探索，以及如何将 Foundation Model 应用于序列推荐与内容理解任务。
+我的研究方向主要包括**强化学习、序列决策、生成式推荐与多模态大语言模型**。我关注如何从不完美的历史数据中学习更优决策策略、如何改进序列决策中的探索机制，以及如何将 Foundation Model 应用于推荐和多模态内容理解。
 
-自 2025 年 3 月起，我在**阿里巴巴淘天集团**担任算法实习生，主要从事生成式自动出价与强化学习研究。我主导完成了多个广告场景的端到端算法迭代，包括生成式决策模型、安全探索和复杂约束下的强化学习。在其中一次主要版本迭代中，线上实现了超过 **10% 的 GMV 提升**；相关成果已产出 KDD、SIGIR 论文，并仍在持续研究中。
+自 2025 年 3 月起，我在**阿里巴巴淘天集团**担任算法实习生，主要从事生成式决策模型与自动出价中的强化学习研究。相关研究成果已被 KDD 和 SIGIR 接收。
 
-## 研究方向
+## 动态
 
-- 强化学习与离线强化学习
-- 大语言模型与后训练
-- 生成式推荐与序列决策
-- 多模态大语言模型与内容理解
+<div class="news-item"><strong>2026</strong> · 生成式自动出价相关工作被 <strong>SIGIR 2026</strong> 接收为 <strong>Oral</strong> 论文。</div>
+<div class="news-item"><strong>2026</strong> · Q 正则化生成式自动出价相关工作被 <strong>KDD 2026</strong> 接收。</div>
+<div class="news-item"><strong>2025</strong> · 多模态仇恨视频检测相关工作被 <strong>EMNLP 2025 Main Conference</strong> 接收。</div>
 
 ## 代表性论文
 
-**HVGuard: Utilizing Multimodal Large Language Models for Hateful Video Detection**  
-*EMNLP 2025 Main，第一作者*  
-提出基于多模态大语言模型的推理式仇恨视频检测框架，结合思维链推理与混合专家网络增强跨模态交互和隐性仇恨识别。
+<div class="pub-item">
+  <div class="pub-title">HVGuard: Utilizing Multimodal Large Language Models for Hateful Video Detection</div>
+  <div class="pub-meta"><strong>EMNLP 2025 Main Conference</strong> · 第一作者</div>
+</div>
 
-**Q-Regularized Generative Auto-Bidding: From Suboptimal Trajectories to Optimal Policies**  
-*KDD 2026 Main，第一作者*  
-将双 Q 学习的价值正则化融入 Decision Transformer，从历史次优轨迹中学习更优自动出价策略，并利用 Q 值指导安全探索。
+<div class="pub-item">
+  <div class="pub-title">Q-Regularized Generative Auto-Bidding: From Suboptimal Trajectories to Optimal Policies</div>
+  <div class="pub-meta"><strong>KDD 2026 Main Conference</strong> · 第一作者</div>
+</div>
 
-**Generative Auto-Bidding with Unified Modeling and Exploration**  
-*SIGIR 2026 Oral，第一作者*  
-提出统一的生成式自动出价框架，结合 Decision Transformer、逆动力学模型与 Q 值动作筛选，在探索性和安全性之间取得平衡。
+<div class="pub-item">
+  <div class="pub-title">Generative Auto-Bidding with Unified Modeling and Exploration</div>
+  <div class="pub-meta"><strong>SIGIR 2026 Oral</strong> · 第一作者</div>
+</div>
 
-**Decomposed Critic for Constrained Generative Auto-Bidding**  
-*投稿 WSDM 2026，第一作者*  
-面向复杂约束的生成式强化学习方法，通过解耦 reward 与 constraint critic，并在训练和推理阶段注入约束知识。
-
-**SkyWalker: Random-Walk Semantic IDs for E-commerce**  
-*投稿 KDD 2027，第一作者*  
-面向生成式推荐提出新的 Semantic ID 构建范式，提升码字利用效率，并增强在不同电商下游任务中的泛化能力。
-
-[查看全部论文 →](/publications/)
+<div class="section-link">[查看全部论文 →](/publications/)</div>
 
 ## 项目
 
-**[From Minimind to More](https://github.com/Tongyun1/from-minimind-to-more)**  
-从零训练大模型项目的系统性开源解析，覆盖数据处理、模型架构、训练算法与代码实现。目前拥有 **1.6K+ GitHub Stars**。
+<div class="project-item">
+  <strong><a href="https://github.com/Tongyun1/from-minimind-to-more">From Minimind to More</a></strong><br>
+  从零训练大模型项目的系统性开源解析，覆盖数据处理、模型架构、训练算法与代码实现。目前拥有 <strong>1.6K+ GitHub Stars</strong>。
+</div>
 
-**[SuperAcademicAgent](https://github.com/Tongyun1/SuperAcademicAgent)**  
-具备自主规划、自主探索与工具调用能力的学术搜索 Agent。
+<div class="project-item">
+  <strong><a href="https://github.com/Tongyun1/SuperAcademicAgent">SuperAcademicAgent</a></strong><br>
+  具备自主规划、自主探索与工具调用能力的学术搜索 Agent。
+</div>
 
-[查看项目 →](/projects/)
+<div class="section-link">[查看项目 →](/projects/)</div>
 
-## 经历
+## 教育与经历
 
 **阿里巴巴淘天集团 — 算法实习生**  
-*2025.03 – 至今*  
-研究方向包括生成式自动出价、强化学习、安全探索与复杂约束下的序列决策。
+*2025.03 – 至今*
 
-**武汉大学 — 网络空间安全硕士**  
-*2024.09 – 至今*
+**武汉大学 — 硕士研究生**  
+*2024.09 – 至今 · 预计 2027.06 毕业*
 
-**武汉大学 — 网络空间安全本科**  
+**武汉大学 — 本科**  
 *2020.09 – 2024.06*
 
 </div>
