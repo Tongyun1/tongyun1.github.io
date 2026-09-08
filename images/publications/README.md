@@ -1,1 +1,0 @@
-Publication figures are extracted from the corresponding published papers.
