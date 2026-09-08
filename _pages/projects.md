@@ -5,24 +5,30 @@ permalink: /projects/
 author_profile: true
 ---
 
-## From Minimind to More
+<style>
+.project-card { margin: 0 0 1.5rem; padding: 0 0 1.25rem; border-bottom: 1px solid #ececec; }
+.project-card:last-child { border-bottom: 0; }
+.project-card h2 { margin-bottom: .35rem; }
+.project-meta { color: #666; margin-bottom: .5rem; font-size: .94rem; }
+</style>
 
-**Role:** Sole contributor  
-**GitHub:** [Tongyun1/from-minimind-to-more](https://github.com/Tongyun1/from-minimind-to-more)  
-**Status:** 1.6K+ Stars
+<div class="project-card">
+<h2><a href="https://github.com/Tongyun1/from-minimind-to-more">From Minimind to More</a></h2>
+<div class="project-meta">Sole contributor · 1.6K+ GitHub Stars</div>
 
-A detailed open-source tutorial for understanding and training a language model from scratch. The project provides theory and code explanations covering data processing, model architecture, training algorithms, and implementation details.
+A detailed open-source tutorial for understanding and training a language model from scratch. It provides theory and code explanations covering data processing, model architecture, training algorithms, and implementation details.
+</div>
 
-## SuperAcademicAgent
+<div class="project-card">
+<h2><a href="https://github.com/Tongyun1/SuperAcademicAgent">SuperAcademicAgent</a></h2>
+<div class="project-meta">Major contributor</div>
 
-**Role:** Major contributor  
-**GitHub:** [Tongyun1/SuperAcademicAgent](https://github.com/Tongyun1/SuperAcademicAgent)
+An academic-search agent with autonomous planning, exploration, and tool use for scholarly search tasks.
+</div>
 
-An autonomous academic-search agent with self-planning, exploration, and tool use, designed to complete targeted scholarly search tasks through an agentic workflow.
+<div class="project-card">
+<h2>CVR Prediction with Feature Crossing and Contrastive Learning</h2>
+<div class="project-meta">Major contributor · National First Prize, China Graduate AI Innovation Competition</div>
 
-## CVR Prediction with Feature Crossing and Contrastive Learning
-
-**Role:** Major contributor  
-**Award:** National First Prize, China Graduate AI Innovation Competition
-
-A conversion-rate prediction system for sparse sample spaces. The project combines feature crossing for sparse/dense feature interaction, multi-task indirect prediction and unbiased estimation for sample-selection bias, and contrastive learning with false-negative and rich-positive samples.
+A conversion-rate prediction project for sparse sample spaces. The method combines feature crossing for sparse and dense features, multi-task prediction and unbiased estimation for sample-selection bias, and contrastive learning to improve the use of scarce conversion samples.
+</div>
