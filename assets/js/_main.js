@@ -1,187 +1,161 @@
-/* ==========================================================================
-   Various functions that we want to use within the template
-   ========================================================================== */
+(() => {
+  "use strict";
 
-/*jslint es6 */
-'use strict';
+  const root = document.documentElement;
+  const colorScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-// Constants for CDNs
-const PLOTLY_URL = "https://cdn.jsdelivr.net/npm/plotly.js@3.6.0/dist/plotly.min.js";
-const MERMAID_URL = "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
-
-// Detect OS/browser preference
-const browserPref = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-// Determine the computed theme, which can be "dark" or "light".
-function determineComputedTheme() {
-  // Determine the expected state of the theme toggle, which can be "dark", "light", or default "system"
-  let themeSetting = localStorage.getItem("theme");
-  themeSetting = (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
-
-  // Return the setting if set, or use the browser preference
-  if (themeSetting != "system") {
-    return themeSetting;
+  function savedTheme() {
+    try {
+      const value = localStorage.getItem("theme");
+      return value === "dark" || value === "light" ? value : null;
+    } catch (_error) {
+      return null;
+    }
   }
-  return browserPref ? "dark" : "light";
-}
 
-// Set the theme on page load or when explicitly called
-function setTheme(theme) {
-  const use_theme = theme ||
-    localStorage.getItem("theme") ||
-    $("html").attr("data-theme") ||
-    browserPref;
-
-  if (use_theme === "dark") {
-    $("html").attr("data-theme", "dark");
-    $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
-  } else if (use_theme === "light") {
-    $("html").removeAttr("data-theme");
-    $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
+  function currentTheme() {
+    return savedTheme() || (colorScheme.matches ? "dark" : "light");
   }
-}
 
-// Toggle the theme manually
-function toggleTheme() {
-  const current_theme = $("html").attr("data-theme");
-  const new_theme = current_theme === "dark" ? "light" : "dark";
-  localStorage.setItem("theme", new_theme);
-  setTheme(new_theme);
-  redrawPlotly();
-}
+  function applyTheme(theme) {
+    const dark = theme === "dark";
+    root.toggleAttribute("data-theme", dark);
+    if (!dark) root.removeAttribute("data-theme");
 
-// Defer the loading of Mermaid to only if there is a field on the page to be rendered
-let mermaidElements = document.querySelectorAll("pre>code.language-mermaid");
-if (mermaidElements.length > 0) {
-  document.addEventListener("readystatechange", function() {
-    // Append the Mermaid module to the DOM
-    const moduleScript = document.createElement('script');
-    moduleScript.type = 'module';
-    moduleScript.textContent = `
-      import mermaid from '${MERMAID_URL}';
-      mermaid.initialize({startOnLoad:true, theme:'default'});
-      await mermaid.run({querySelector:'code.language-mermaid'});
-    `;
-    document.body.appendChild(moduleScript);
-  });
-}
-
-/* ==========================================================================
-   Plotly integration script so that Markdown codeblocks will be rendered
-   ========================================================================== */
-
-// Read the Plotly data from the code block, hide it, and render the chart as new node. This allows for the
-// JSON data to be retrieve when the theme is switched. The listener should only be added if the data is
-// actually present on the page.
-//
-// NOTE that plotlyDarkLayout and plotlyLightLayout will be exposed in the minimized file
-let plotlyElements = document.querySelectorAll("pre>code.language-plotly");
-if (plotlyElements.length > 0) {
-  document.addEventListener("readystatechange", function() {
-    // Return if not ready
-    if (document.readyState !== "complete") {
-      return;
+    const icon = document.getElementById("theme-icon");
+    if (icon) {
+      icon.classList.toggle("fa-moon", dark);
+      icon.classList.toggle("fa-sun", !dark);
     }
 
-    // Prepare to load Plotly from the CDN
-    const script = document.createElement('script');
-    script.src = PLOTLY_URL;
-    script.async = true;
+    const toggle = document.querySelector("#theme-toggle > a");
+    if (toggle) {
+      toggle.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
+    }
+  }
 
-    // Once loaded, update the page elements to work with it
-    script.onload = function() {
-      plotlyElements.forEach(function(elem) {
-        // Parse the Plotly JSON data and hide it
-        let jsonData = JSON.parse(elem.textContent);
-        elem.parentElement.classList.add("hidden");
+  function initTheme() {
+    applyTheme(currentTheme());
 
-        // Add the Plotly node
-        let chartElement = document.createElement("div");
-        elem.parentElement.after(chartElement);
-
-        // Set the theme for the plot and render it
-        const theme = (determineComputedTheme() === "dark") ? plotlyDarkLayout : plotlyLightLayout;
-        if (jsonData.layout) {
-          jsonData.layout.template = (jsonData.layout.template) ? { ...theme, ...jsonData.layout.template } : theme;
-        } else {
-          jsonData.layout = { template: theme };
-        }
-        Plotly.react(chartElement, jsonData.data, jsonData.layout);
+    const toggle = document.getElementById("theme-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", () => {
+        const next = root.hasAttribute("data-theme") ? "light" : "dark";
+        try { localStorage.setItem("theme", next); } catch (_error) {}
+        applyTheme(next);
       });
-    }
-
-    // Add the script to the document
-    document.head.appendChild(script);
-  });
-}
-
-function redrawPlotly() {
-  plotlyElements.forEach(function(elem) {
-    // Parse the Plotly JSON data
-    let jsonData = JSON.parse(elem.textContent);
-
-    // Get the Plotly node
-    let chartElement = $(elem).parent().next().get(0);
-
-    // Set the theme for the plot and render it
-    const theme = (determineComputedTheme() === "dark") ? plotlyDarkLayout : plotlyLightLayout;
-    if (jsonData.layout) {
-      jsonData.layout.template = (jsonData.layout.template) ? { ...theme, ...jsonData.layout.template } : theme;
-    } else {
-      jsonData.layout = { template: theme };
-    }
-    Plotly.react(chartElement, jsonData.data, jsonData.layout);
-  });
-}
-
-/* ==========================================================================
-   Actions that should occur when the page has been fully loaded
-   ========================================================================== */
-
-$(document).ready(function () {
-  // SCSS SETTINGS - These should be the same as the settings in the relevant files
-  const scssLarge = 925;          // pixels, from /_sass/_themes.scss
-  const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
-
-  // If the user hasn't chosen a theme, follow the OS preference
-  setTheme();
-  window.matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener("change", (e) => {
-          if (!localStorage.getItem("theme")) {
-            setTheme(e.matches ? "dark" : "light");
+      const control = toggle.querySelector("a");
+      if (control) {
+        control.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            toggle.click();
           }
         });
-
-  // Enable the theme toggle
-  $('#theme-toggle').on('click', toggleTheme);
-
-  // Enable the sticky footer
-  var bumpIt = function () {
-    $("body").css("padding-bottom", "0");
-    $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
-  }
-  $(window).resize(function () {
-    didResize = true;
-  });
-  setInterval(function () {
-    if (didResize) {
-      didResize = false;
-      bumpIt();
-    }}, 250);
-  var didResize = false;
-  bumpIt();
-
-  // Follow menu drop down
-  $(".author__urls-wrapper button").on("click", function () {
-    $(".author__urls").fadeToggle("fast", function () { });
-    $(".author__urls-wrapper button").toggleClass("open");
-  });
-
-  // Restore the follow menu if toggled on a window resize
-  jQuery(window).on('resize', function () {
-    if ($('.author__urls.social-icons').css('display') == 'none' && $(window).width() >= scssLarge) {
-      $(".author__urls").css('display', 'block')
+      }
     }
-  });
 
-});
+    colorScheme.addEventListener("change", () => {
+      if (!savedTheme()) applyTheme(currentTheme());
+    });
+  }
+
+  function initGreedyNavigation() {
+    const nav = document.getElementById("site-nav");
+    if (!nav) return;
+
+    const button = nav.querySelector("button");
+    const visible = nav.querySelector(".visible-links");
+    const hidden = nav.querySelector(".hidden-links");
+    const tail = visible.querySelector(".persist.tail");
+    const breaks = [];
+
+    function availableWidth() {
+      return nav.clientWidth - (button.classList.contains("hidden") ? 0 : button.offsetWidth + 30);
+    }
+
+    function update() {
+      let available = availableWidth();
+
+      while (visible.scrollWidth > available) {
+        const movable = visible.querySelectorAll(":scope > li:not(.persist)");
+        const item = movable[movable.length - 1];
+        if (!item) break;
+        breaks.push(visible.scrollWidth);
+        hidden.insertBefore(item, hidden.firstChild);
+        button.classList.remove("hidden");
+        available = availableWidth();
+      }
+
+      while (breaks.length && available > breaks[breaks.length - 1]) {
+        const item = hidden.firstElementChild;
+        if (!item) break;
+        if (tail) visible.insertBefore(item, tail);
+        else visible.appendChild(item);
+        breaks.pop();
+        available = availableWidth();
+      }
+
+      const empty = hidden.children.length === 0;
+      button.classList.toggle("hidden", empty);
+      button.classList.toggle("close", !empty && !hidden.classList.contains("hidden"));
+      button.setAttribute("aria-label", "More navigation links");
+      button.setAttribute("aria-expanded", String(!hidden.classList.contains("hidden")));
+
+      const masthead = document.querySelector(".masthead");
+      const mastheadHeight = masthead ? masthead.offsetHeight : 0;
+      document.body.style.paddingTop = `${mastheadHeight}px`;
+
+      const sidebar = document.querySelector(".sidebar");
+      const authorButton = document.querySelector(".author__urls-wrapper > button");
+      if (sidebar && authorButton && getComputedStyle(authorButton).display === "none") {
+        sidebar.style.paddingTop = `${mastheadHeight}px`;
+      } else if (sidebar) {
+        sidebar.style.removeProperty("padding-top");
+      }
+    }
+
+    button.addEventListener("click", () => {
+      hidden.classList.toggle("hidden");
+      button.classList.toggle("close");
+      button.setAttribute("aria-expanded", String(!hidden.classList.contains("hidden")));
+    });
+
+    if ("ResizeObserver" in window) new ResizeObserver(update).observe(nav);
+    else window.addEventListener("resize", update, { passive: true });
+
+    if (screen.orientation && screen.orientation.addEventListener) {
+      screen.orientation.addEventListener("change", update);
+    }
+    update();
+  }
+
+  function initAuthorLinks() {
+    const button = document.querySelector(".author__urls-wrapper > button");
+    const links = document.querySelector(".author__urls");
+    if (!button || !links) return;
+
+    button.setAttribute("aria-expanded", "false");
+    button.addEventListener("click", () => {
+      const open = button.classList.toggle("open");
+      links.classList.toggle("is-open", open);
+      button.setAttribute("aria-expanded", String(open));
+    });
+  }
+
+  function initFooterOffset() {
+    const footer = document.querySelector(".page__footer");
+    if (!footer) return;
+    const update = () => { document.body.style.marginBottom = `${footer.offsetHeight}px`; };
+    if ("ResizeObserver" in window) new ResizeObserver(update).observe(footer);
+    else window.addEventListener("resize", update, { passive: true });
+    update();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    initTheme();
+    initGreedyNavigation();
+    initAuthorLinks();
+    initFooterOffset();
+  });
+})();

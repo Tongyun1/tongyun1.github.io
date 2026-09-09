@@ -1,0 +1,38 @@
+- id: minimind
+  name: "From Minimind to More"
+  eyebrow_en: "Open-source tutorial · Sole contributor"
+  eyebrow_zh: "开源教程 · 独立贡献者"
+  metric: "1.6K+ GitHub Stars"
+  description_en: "A systematic, code-first guide to understanding and training a language model from scratch, from data preparation and architecture to training algorithms and implementation details."
+  description_zh: "从数据处理、模型架构到训练算法与代码实现，系统讲解如何从零理解和训练大语言模型。"
+  url: "https://github.com/Tongyun1/from-minimind-to-more"
+  tags:
+    - "LLM"
+    - "Training"
+    - "Open Source"
+
+- id: super-academic-agent
+  name: "SuperAcademicAgent"
+  eyebrow_en: "Research agent · Major contributor"
+  eyebrow_zh: "学术智能体 · 主要贡献者"
+  description_en: "An academic-search agent that plans, explores, and uses tools autonomously to support structured scholarly discovery."
+  description_zh: "具备自主规划、探索与工具调用能力的学术搜索 Agent，用于结构化的学术发现与检索。"
+  url: "https://github.com/Tongyun1/SuperAcademicAgent"
+  tags:
+    - "Agents"
+    - "Academic Search"
+    - "Tool Use"
+
+- id: cvr
+  name: "CVR Prediction with Feature Crossing and Contrastive Learning"
+  name_zh: "基于特征交叉与对比学习的 CVR 预估"
+  eyebrow_en: "Applied machine learning · Major contributor"
+  eyebrow_zh: "应用机器学习 · 主要贡献者"
+  metric: "National First Prize"
+  metric_zh: "全国一等奖"
+  description_en: "A conversion-rate prediction system for sparse sample spaces, combining feature crossing, multi-task unbiased estimation, and contrastive learning."
+  description_zh: "面向稀疏样本空间的转化率预估系统，结合特征交叉、多任务无偏估计与对比学习。"
+  tags:
+    - "Recommendation"
+    - "CVR"
+    - "Contrastive Learning"

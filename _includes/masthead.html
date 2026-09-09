@@ -9,7 +9,7 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><span class="navicon"></span></button>
+        <button type="button" aria-label="More navigation links" aria-expanded="false"><span class="navicon"></span></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
             <a href="{{ base_path }}/"
@@ -29,10 +29,10 @@
             </li>
           {% endfor %}
           <li id="language-toggle" class="masthead__menu-item persist">
-            <a role="button" aria-label="Switch language">中文</a>
+            <a role="button" tabindex="0" aria-label="Switch language">中文</a>
           </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+            <a role="button" tabindex="0" aria-label="Switch theme"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true"></i></a>
           </li>
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -118,6 +118,12 @@
       toggle.addEventListener('click', function () {
         var next = document.documentElement.lang === 'zh-CN' ? 'en' : 'zh';
         applyLanguage(next);
+      });
+      toggle.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          toggle.click();
+        }
       });
     }
   }

@@ -1,18 +1,17 @@
-name: Jekyll build
+name: Jekyll build validation
 
 on:
-  # Run after bad-pr check
-  workflow_run:
-    workflows: ["Cleanup bad PR"]
-    branches: [main]
-    types:
-      - completed
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
       
 permissions:
   contents: read
 
 concurrency:
-  group: jekyll-build-${{ github.ref }}
+  group: jekyll-build-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:

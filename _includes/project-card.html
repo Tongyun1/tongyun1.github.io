@@ -1,0 +1,22 @@
+{% assign project = include.project %}
+<article class="project-card">
+  <div class="project-card__topline">
+    <span class="lang-en">{{ project.eyebrow_en }}</span>
+    <span class="lang-zh" style="display:none;">{{ project.eyebrow_zh }}</span>
+    {% if project.metric %}
+      <span class="project-card__metric lang-en">{{ project.metric }}</span>
+      <span class="project-card__metric lang-zh" style="display:none;">{{ project.metric_zh | default: project.metric }}</span>
+    {% endif %}
+  </div>
+  <h2 class="project-card__title">
+    {% if project.url %}<a href="{{ project.url }}" rel="noopener noreferrer">{% endif %}
+      <span class="lang-en">{{ project.name }}</span>
+      <span class="lang-zh" style="display:none;">{{ project.name_zh | default: project.name }}</span>
+    {% if project.url %}<span aria-hidden="true"> ↗</span></a>{% endif %}
+  </h2>
+  <p class="lang-en">{{ project.description_en }}</p>
+  <p class="lang-zh" style="display:none;">{{ project.description_zh }}</p>
+  <div class="tag-list" aria-label="Project topics">
+    {% for tag in project.tags %}<span>{{ tag }}</span>{% endfor %}
+  </div>
+</article>

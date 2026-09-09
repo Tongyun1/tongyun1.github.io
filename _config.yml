@@ -6,19 +6,19 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Mingming Zhang | 张明鸣"
+title                    : "Mingming Zhang"
 title_en                 : "Mingming Zhang"
 title_zh                 : "张明鸣"
 title_separator          : "-"
 name                     : &name "Mingming Zhang"
-description              : &description "Mingming Zhang's academic homepage — reinforcement learning, sequential decision making, generative recommendation, and multimodal large language models."
+description              : &description "Mingming Zhang's academic homepage — reinforcement learning, sequential decision making, generative recommendation, auto-bidding, and multimodal AI."
 url                      : https://tongyun1.github.io
 baseurl                  : ""
 repository               : "Tongyun1/tongyun1.github.io"
 
 # Site Author
 author:
-  avatar           : "https://avatars.githubusercontent.com/u/118033038?v=4"
+  avatar           : "profile.png"
   name             : "Mingming Zhang | 张明鸣"
   name_en          : "Mingming Zhang"
   name_zh          : "张明鸣"
@@ -136,8 +136,8 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :
-og_description           :
+og_image                 : "og-card.jpg"
+og_description           : *description
 social:
   type                   : Person
   name                   : "Mingming Zhang"
@@ -156,6 +156,7 @@ include:
   - _pages
   - files
 exclude:
+  - AGENTS.md
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -178,8 +179,10 @@ exclude:
   - log
   - node_modules
   - package.json*
+  - package-lock.json
   - Rakefile
   - README
+  - README.md
   - tmp
   - vendor
 keep_files:

@@ -3,158 +3,127 @@ permalink: /
 title: "Mingming Zhang"
 title_en: "Mingming Zhang"
 title_zh: "张明鸣"
+description: "Mingming Zhang is a researcher at Wuhan University working on reinforcement learning, generative recommendation, auto-bidding, and multimodal AI."
 author_profile: true
+hide_title: true
 redirect_from:
   - /about/
   - /about.html
 ---
 
-<style>
-.home-hero { margin: .2rem 0 1.8rem; }
-.home-hero h1 { margin-bottom: .35rem; font-size: 2rem; }
-.home-subtitle { margin: 0 0 1rem; color: #666; font-size: 1.05rem; line-height: 1.55; }
-.research-tags { display: flex; flex-wrap: wrap; gap: .45rem; margin: .8rem 0 0; }
-.research-tag { display: inline-block; padding: .28rem .62rem; border-radius: 999px; background: #f3f4f6; font-size: .88rem; }
-.pub-item, .project-item, .news-item { margin: 0 0 1.15rem; }
-.pub-title { font-weight: 650; line-height: 1.45; }
-.pub-meta { color: #666; margin-top: .18rem; font-size: .94rem; }
-.pub-desc { margin-top: .28rem; font-size: .95rem; }
-.section-link { margin-top: .3rem; }
-.section-link a { text-decoration: none; font-weight: 600; }
-.section-link a:hover { text-decoration: underline; }
-@media (max-width: 600px) { .home-hero h1 { font-size: 1.7rem; } }
-</style>
-
-<div class="lang-en">
-  <div class="home-hero">
-    <h1>Mingming Zhang <span style="font-weight:400;">张明鸣</span></h1>
-    <p class="home-subtitle">Master's student at Wuhan University · Reinforcement Learning · Generative Recommendation · Multimodal Large Language Models</p>
-    <div class="research-tags">
-      <span class="research-tag">Reinforcement Learning</span>
-      <span class="research-tag">Sequential Decision Making</span>
-      <span class="research-tag">Generative Recommendation</span>
-      <span class="research-tag">Multimodal LLMs</span>
-    </div>
+<section class="profile-hero" aria-labelledby="profile-heading">
+  <div class="profile-hero__eyebrow">
+    <span class="lang-en">Researcher · Builder · Open-source contributor</span>
+    <span class="lang-zh" style="display:none;">研究者 · 开发者 · 开源贡献者</span>
   </div>
-
-  <h2>About</h2>
-  <p>I am a master's student at <strong>Wuhan University</strong>, where I also completed my bachelor's degree through the Ziqiang Honors Program. I expect to graduate in June 2027.</p>
-  <p>My research focuses on <strong>reinforcement learning, sequential decision making, generative recommendation, and multimodal large language models</strong>. I am interested in learning better policies from imperfect historical data, improving exploration in sequential decision problems, and using foundation models for recommendation and multimodal content understanding.</p>
-  <p>Since March 2025, I have been an algorithm intern at <strong>Alibaba Taobao & Tmall Group</strong>, working on generative decision models and reinforcement-learning methods for auto-bidding. Related research has resulted in accepted papers at KDD and SIGIR.</p>
-
-  <h2>News</h2>
-  <div class="news-item"><strong>2026</strong> · Our work on generative auto-bidding was accepted to <strong>SIGIR 2026</strong> as an <strong>Oral</strong> paper.</div>
-  <div class="news-item"><strong>2026</strong> · Our work on Q-regularized generative auto-bidding was accepted to <strong>KDD 2026</strong>.</div>
-  <div class="news-item"><strong>2025</strong> · Our work on multimodal hateful-video detection was accepted to <strong>EMNLP 2025 Main Conference</strong>.</div>
-
-  <h2>Selected Publications</h2>
-  <div class="pub-item">
-    <div class="pub-title">HVGuard: Utilizing Multimodal Large Language Models for Hateful Video Detection</div>
-    <div class="pub-meta"><strong>EMNLP 2025 Main Conference</strong> · First Author</div>
+  <h1 id="profile-heading">
+    <span class="lang-en">Mingming Zhang <span lang="zh-CN">张明鸣</span></span>
+    <span class="lang-zh" style="display:none;">张明鸣 <span lang="en">Mingming Zhang</span></span>
+  </h1>
+  <p class="profile-hero__lead lang-en">I study how learning systems can make better sequential decisions from imperfect data, with a focus on reinforcement learning, generative recommendation, auto-bidding, and multimodal intelligence.</p>
+  <p class="profile-hero__lead lang-zh" style="display:none;">我关注学习系统如何从不完美的数据中做出更好的序列决策，研究方向包括强化学习、生成式推荐、自动出价与多模态智能。</p>
+  <div class="profile-hero__actions">
+    <a class="profile-button profile-button--primary" href="mailto:{{ site.author.email }}">
+      <span class="lang-en">Get in touch</span><span class="lang-zh" style="display:none;">联系我</span>
+    </a>
+    <a class="profile-button" href="https://github.com/{{ site.author.github }}" rel="noopener noreferrer">GitHub ↗</a>
+    <a class="profile-button" href="/cv/">
+      <span class="lang-en">View CV</span><span class="lang-zh" style="display:none;">查看简历</span>
+    </a>
   </div>
-  <div class="pub-item">
-    <div class="pub-title">Q-Regularized Generative Auto-Bidding: From Suboptimal Trajectories to Optimal Policies</div>
-    <div class="pub-meta"><strong>KDD 2026 Main Conference</strong> · First Author</div>
-  </div>
-  <div class="pub-item">
-    <div class="pub-title">Generative Auto-Bidding with Unified Modeling and Exploration</div>
-    <div class="pub-meta"><strong>SIGIR 2026 Oral</strong> · First Author</div>
-  </div>
+</section>
 
-  <h3>Under Review</h3>
-  <div class="pub-item">
-    <div class="pub-title">Project A</div>
-    <div class="pub-meta"><strong>WSDM 2027</strong> · Under Review · First Author</div>
-    <div class="pub-desc">Research direction: constrained generative auto-bidding and reinforcement learning.</div>
+<div class="metric-strip" aria-label="Research highlights">
+  <div class="metric-strip__item">
+    <span class="metric-strip__value">SIGIR 2026</span>
+    <span class="metric-strip__label lang-en">Oral · First author</span>
+    <span class="metric-strip__label lang-zh" style="display:none;">Oral · 第一作者</span>
   </div>
-  <div class="pub-item">
-    <div class="pub-title">Project B</div>
-    <div class="pub-meta"><strong>KDD 2027</strong> · Under Review · First Author</div>
-    <div class="pub-desc">Research direction: semantic IDs and generative recommendation for e-commerce.</div>
+  <div class="metric-strip__item">
+    <span class="metric-strip__value">KDD 2026</span>
+    <span class="metric-strip__label lang-en">Co-first author</span>
+    <span class="metric-strip__label lang-zh" style="display:none;">共同第一作者</span>
   </div>
-
-  <div class="section-link"><a href="/publications/">View all publications →</a></div>
-
-  <h2>Projects</h2>
-  <div class="project-item">
-    <strong><a href="https://github.com/Tongyun1/from-minimind-to-more">From Minimind to More</a></strong><br>
-    A detailed open-source tutorial for understanding and training a language model from scratch, covering data processing, model architecture, training algorithms, and implementation details. <strong>1.6K+ GitHub Stars</strong>.
+  <div class="metric-strip__item">
+    <span class="metric-strip__value">EMNLP 2025</span>
+    <span class="metric-strip__label lang-en">Main Conference · Co-first author</span>
+    <span class="metric-strip__label lang-zh" style="display:none;">主会论文 · 共同第一作者</span>
   </div>
-  <div class="project-item">
-    <strong><a href="https://github.com/Tongyun1/SuperAcademicAgent">SuperAcademicAgent</a></strong><br>
-    An academic-search agent with autonomous planning, exploration, and tool use.
-  </div>
-  <div class="section-link"><a href="/projects/">View projects →</a></div>
-
-  <h2>Education &amp; Experience</h2>
-  <p><strong>Alibaba Taobao &amp; Tmall Group — Algorithm Intern</strong><br><em>Mar. 2025 – Present</em></p>
-  <p><strong>Wuhan University — Master's Student</strong><br><em>Sep. 2024 – Present · Expected Jun. 2027</em></p>
-  <p><strong>Wuhan University — Bachelor's Degree</strong><br><em>Sep. 2020 – Jun. 2024</em></p>
 </div>
 
-<div class="lang-zh" style="display:none;">
-  <div class="home-hero">
-    <h1>张明鸣 <span style="font-weight:400;">Mingming Zhang</span></h1>
-    <p class="home-subtitle">武汉大学硕士研究生 · 强化学习 · 生成式推荐 · 多模态大语言模型</p>
-    <div class="research-tags">
-      <span class="research-tag">强化学习</span>
-      <span class="research-tag">序列决策</span>
-      <span class="research-tag">生成式推荐</span>
-      <span class="research-tag">多模态大语言模型</span>
+<section class="profile-section" aria-labelledby="about-heading">
+  <div class="section-heading">
+    <div>
+      <div class="section-heading__eyebrow lang-en">Background</div>
+      <div class="section-heading__eyebrow lang-zh" style="display:none;">个人背景</div>
+      <h2 id="about-heading"><span class="lang-en">About</span><span class="lang-zh" style="display:none;">关于我</span></h2>
     </div>
   </div>
-
-  <h2>关于我</h2>
-  <p>我是<strong>武汉大学</strong>硕士研究生，本科同样就读于武汉大学自强实验班，预计于 2027 年 6 月毕业。</p>
-  <p>我的研究方向主要包括<strong>强化学习、序列决策、生成式推荐与多模态大语言模型</strong>。我关注如何从不完美的历史数据中学习更优决策策略、如何改进序列决策中的探索机制，以及如何将 Foundation Model 应用于推荐和多模态内容理解。</p>
-  <p>自 2025 年 3 月起，我在<strong>阿里巴巴淘天集团</strong>担任算法实习生，主要从事生成式决策模型与自动出价中的强化学习研究。相关研究成果已被 KDD 和 SIGIR 接收。</p>
-
-  <h2>动态</h2>
-  <div class="news-item"><strong>2026</strong> · 生成式自动出价相关工作被 <strong>SIGIR 2026</strong> 接收为 <strong>Oral</strong> 论文。</div>
-  <div class="news-item"><strong>2026</strong> · Q 正则化生成式自动出价相关工作被 <strong>KDD 2026</strong> 接收。</div>
-  <div class="news-item"><strong>2025</strong> · 多模态仇恨视频检测相关工作被 <strong>EMNLP 2025 Main Conference</strong> 接收。</div>
-
-  <h2>代表性论文</h2>
-  <div class="pub-item">
-    <div class="pub-title">HVGuard: Utilizing Multimodal Large Language Models for Hateful Video Detection</div>
-    <div class="pub-meta"><strong>EMNLP 2025 Main Conference</strong> · 第一作者</div>
+  <div class="about-copy lang-en">
+    <p>I am a master's student at <strong>Wuhan University</strong>, where I also completed my bachelor's degree through the Ziqiang Honors Program. I expect to graduate in June 2027.</p>
+    <p>Since March 2025, I have been an algorithm intern at <strong>Alibaba Taobao &amp; Tmall Group</strong>, working on generative decision models and reinforcement-learning methods for auto-bidding. I am particularly interested in learning stronger policies from imperfect historical data, improving exploration under real-world constraints, and applying foundation models to recommendation and multimodal understanding.</p>
   </div>
-  <div class="pub-item">
-    <div class="pub-title">Q-Regularized Generative Auto-Bidding: From Suboptimal Trajectories to Optimal Policies</div>
-    <div class="pub-meta"><strong>KDD 2026 Main Conference</strong> · 第一作者</div>
+  <div class="about-copy lang-zh" style="display:none;">
+    <p>我是<strong>武汉大学</strong>硕士研究生，本科同样就读于武汉大学自强实验班，预计于 2027 年 6 月毕业。</p>
+    <p>自 2025 年 3 月起，我在<strong>阿里巴巴淘天集团</strong>担任算法实习生，从事生成式决策模型与自动出价中的强化学习研究。我尤其关注如何从不完美的历史数据中学习更优策略、如何在真实约束下改进探索，以及如何将基础模型用于推荐和多模态理解。</p>
   </div>
-  <div class="pub-item">
-    <div class="pub-title">Generative Auto-Bidding with Unified Modeling and Exploration</div>
-    <div class="pub-meta"><strong>SIGIR 2026 Oral</strong> · 第一作者</div>
-  </div>
+</section>
 
-  <h3>投稿中</h3>
-  <div class="pub-item">
-    <div class="pub-title">Project A</div>
-    <div class="pub-meta"><strong>WSDM 2027</strong> · 审稿中 · 第一作者</div>
-    <div class="pub-desc">研究方向：复杂约束下的生成式自动出价与强化学习。</div>
+<section class="profile-section" aria-labelledby="news-heading">
+  <div class="section-heading">
+    <div>
+      <div class="section-heading__eyebrow lang-en">Updates</div>
+      <div class="section-heading__eyebrow lang-zh" style="display:none;">近期动态</div>
+      <h2 id="news-heading"><span class="lang-en">News</span><span class="lang-zh" style="display:none;">动态</span></h2>
+    </div>
   </div>
-  <div class="pub-item">
-    <div class="pub-title">Project B</div>
-    <div class="pub-meta"><strong>KDD 2027</strong> · 审稿中 · 第一作者</div>
-    <div class="pub-desc">研究方向：面向电商生成式推荐的 Semantic ID。</div>
-  </div>
+  <ol class="timeline">
+    <li class="timeline__item">
+      <span class="timeline__date">2026 · SIGIR</span>
+      <span class="timeline__copy lang-en">Our work on unified generative auto-bidding and safe exploration was accepted as an <strong>Oral</strong> paper.</span>
+      <span class="timeline__copy lang-zh" style="display:none;">统一生成式自动出价与安全探索工作被接收为 <strong>Oral</strong> 论文。</span>
+    </li>
+    <li class="timeline__item">
+      <span class="timeline__date">2026 · KDD</span>
+      <span class="timeline__copy lang-en">Our work on Q-regularized generative auto-bidding was accepted to the research track.</span>
+      <span class="timeline__copy lang-zh" style="display:none;">Q 正则化生成式自动出价工作被研究赛道接收。</span>
+    </li>
+    <li class="timeline__item">
+      <span class="timeline__date">2025 · EMNLP</span>
+      <span class="timeline__copy lang-en">Our work on multimodal hateful-video detection was accepted to the Main Conference.</span>
+      <span class="timeline__copy lang-zh" style="display:none;">多模态仇恨视频检测工作被主会接收。</span>
+    </li>
+  </ol>
+</section>
 
-  <div class="section-link"><a href="/publications/">查看全部论文 →</a></div>
-
-  <h2>项目</h2>
-  <div class="project-item">
-    <strong><a href="https://github.com/Tongyun1/from-minimind-to-more">From Minimind to More</a></strong><br>
-    从零训练大模型项目的系统性开源解析，覆盖数据处理、模型架构、训练算法与代码实现。目前拥有 <strong>1.6K+ GitHub Stars</strong>。
+<section class="profile-section" aria-labelledby="publications-heading">
+  <div class="section-heading">
+    <div>
+      <div class="section-heading__eyebrow lang-en">Selected work</div>
+      <div class="section-heading__eyebrow lang-zh" style="display:none;">代表性成果</div>
+      <h2 id="publications-heading"><span class="lang-en">Publications</span><span class="lang-zh" style="display:none;">论文</span></h2>
+    </div>
+    <a href="/publications/"><span class="lang-en">All publications</span><span class="lang-zh" style="display:none;">全部论文</span> →</a>
   </div>
-  <div class="project-item">
-    <strong><a href="https://github.com/Tongyun1/SuperAcademicAgent">SuperAcademicAgent</a></strong><br>
-    具备自主规划、探索与工具调用能力的学术搜索 Agent。
+  <div class="publication-grid">
+    {% for publication in site.data.publications.accepted %}
+      {% include publication-card.html publication=publication compact=true %}
+    {% endfor %}
   </div>
-  <div class="section-link"><a href="/projects/">查看项目 →</a></div>
+</section>
 
-  <h2>教育与经历</h2>
-  <p><strong>阿里巴巴淘天集团 — 算法实习生</strong><br><em>2025.03 – 至今</em></p>
-  <p><strong>武汉大学 — 硕士研究生</strong><br><em>2024.09 – 至今 · 预计 2027.06 毕业</em></p>
-  <p><strong>武汉大学 — 本科</strong><br><em>2020.09 – 2024.06</em></p>
-</div>
+<section class="profile-section" aria-labelledby="projects-heading">
+  <div class="section-heading">
+    <div>
+      <div class="section-heading__eyebrow lang-en">Open source &amp; applied work</div>
+      <div class="section-heading__eyebrow lang-zh" style="display:none;">开源与实践</div>
+      <h2 id="projects-heading"><span class="lang-en">Projects</span><span class="lang-zh" style="display:none;">项目</span></h2>
+    </div>
+    <a href="/projects/"><span class="lang-en">All projects</span><span class="lang-zh" style="display:none;">全部项目</span> →</a>
+  </div>
+  <div class="project-grid">
+    {% for project in site.data.projects limit:2 %}
+      {% include project-card.html project=project %}
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,41 @@
+{% assign publication = include.publication %}
+<article class="publication-card" id="{{ publication.id }}">
+  <div class="publication-card__header">
+    <div class="publication-card__meta">
+      <span class="venue-badge">{{ publication.venue }}</span>
+      {% if publication.venue_note_en %}
+        <span class="publication-card__venue-note lang-en">{{ publication.venue_note_en }}</span>
+        <span class="publication-card__venue-note lang-zh" style="display:none;">{{ publication.venue_note_zh }}</span>
+      {% endif %}
+    </div>
+    <h3 class="publication-card__title">{{ publication.title }}</h3>
+  </div>
+
+  {% if include.compact != true %}
+    <p class="publication-card__authors">{{ publication.authors | replace: "Mingming Zhang", "<strong>Mingming Zhang</strong>" }}</p>
+    {% if publication.image %}
+      <a class="publication-card__figure" href="{{ publication.links[0].url }}" rel="noopener noreferrer">
+        <img src="{{ publication.image }}" alt="{{ publication.image_alt }}" loading="lazy" decoding="async">
+      </a>
+    {% endif %}
+  {% endif %}
+
+  <p class="publication-card__summary lang-en">{{ publication.summary_en }}</p>
+  <p class="publication-card__summary lang-zh" style="display:none;">{{ publication.summary_zh }}</p>
+
+  <div class="publication-card__footer">
+    <span class="publication-card__role lang-en">{{ publication.role_en }}</span>
+    <span class="publication-card__role lang-zh" style="display:none;">{{ publication.role_zh }}</span>
+    {% if publication.links %}
+      <div class="publication-card__links">
+        {% for link in publication.links %}
+          <a href="{{ link.url }}" rel="noopener noreferrer">
+            <span class="lang-en">{{ link.label_en }}</span>
+            <span class="lang-zh" style="display:none;">{{ link.label_zh }}</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</article>

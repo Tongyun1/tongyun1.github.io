@@ -1,0 +1,77 @@
+accepted:
+  - id: guide
+    year: 2026
+    venue: "SIGIR 2026"
+    venue_note_en: "Oral presentation"
+    venue_note_zh: "Oral 论文"
+    title: "Generative Auto-Bidding with Unified Modeling and Exploration"
+    image: "/images/publications/guide-main.webp"
+    image_alt: "GUIDE training and inference architecture"
+    authors: "Mingming Zhang*, Feiqing Zhuang, Na Li*, Shengjie Sun, Xiaowei Chen, Junxiong Zhu, Fei Xiao, Keping Yang, Lixin Zou, and Chenliang Li"
+    role_en: "First author"
+    role_zh: "第一作者"
+    summary_en: "A unified explore-safeguard-select framework that combines a Decision Transformer, inverse dynamics modeling, and Q-value-guided action selection to improve bidding performance while maintaining a safe fallback policy."
+    summary_zh: "提出统一的“探索-保护-选择”框架，结合 Decision Transformer、逆动力学模型和 Q 值引导的动作选择，在提升出价效果的同时保留安全回退策略。"
+    links:
+      - label_en: "Paper"
+        label_zh: "论文"
+        url: "https://dl.acm.org/doi/10.1145/3805712.3809661"
+
+  - id: qga
+    year: 2026
+    venue: "KDD 2026"
+    venue_note_en: "Research track"
+    venue_note_zh: "研究论文"
+    title: "Q-Regularized Generative Auto-Bidding: From Suboptimal Trajectories to Optimal Policies"
+    image: "/images/publications/qga-main.webp"
+    image_alt: "QGA Q-regularized learning and dual-exploration architecture"
+    authors: "Mingming Zhang*, Na Li*, Feiqing Zhuang, Hongyang Zheng, Jiangbing Zhou, Wuyin Wang, Shengjie Sun, Xiaowei Chen, Junxiong Zhu, Lixin Zou, and Chenliang Li"
+    role_en: "Co-first author"
+    role_zh: "共同第一作者"
+    summary_en: "A compact generative auto-bidding method that adds double-Q regularization and Q-guided dual exploration to Decision Transformers, enabling policy improvement beyond suboptimal offline trajectories."
+    summary_zh: "在 Decision Transformer 中引入双 Q 正则化与 Q 值引导的双重探索，从次优离线轨迹中学习并进一步改进策略。"
+    links:
+      - label_en: "Paper"
+        label_zh: "论文"
+        url: "https://dl.acm.org/doi/10.1145/3770854.3783950"
+      - label_en: "Code"
+        label_zh: "代码"
+        url: "https://github.com/Tongyun1/QGA"
+
+  - id: hvguard
+    year: 2025
+    venue: "EMNLP 2025"
+    venue_note_en: "Main Conference"
+    venue_note_zh: "主会论文"
+    title: "HVGuard: Utilizing Multimodal Large Language Models for Hateful Video Detection"
+    image: "/images/publications/hvguard-main.webp"
+    image_alt: "HVGuard multimodal reasoning and mixture-of-experts architecture"
+    authors: "Yiheng Jing*, Mingming Zhang*, Yong Zhuang, Jiacheng Guo, Juan Wang, Xiaoyang Xu, Wenzhe Yi, Keyan Guo, and Hongxin Hu"
+    role_en: "Co-first author"
+    role_zh: "共同第一作者"
+    summary_en: "A reasoning-based hateful-video detection framework that combines multimodal large language models, chain-of-thought reasoning, and mixture-of-experts fusion for implicit cross-modal hate understanding."
+    summary_zh: "面向隐性跨模态仇恨内容理解，结合多模态大语言模型、思维链推理与混合专家融合的仇恨视频检测框架。"
+    links:
+      - label_en: "Paper"
+        label_zh: "论文"
+        url: "https://aclanthology.org/2025.emnlp-main.456/"
+      - label_en: "Code"
+        label_zh: "代码"
+        url: "https://github.com/yihengjingWHU/HVGuard"
+
+under_review:
+  - id: project-a
+    label: "Project A"
+    venue: "WSDM 2027"
+    role_en: "First author"
+    role_zh: "第一作者"
+    summary_en: "Constrained generative auto-bidding and reinforcement learning. The title and technical details are intentionally withheld during anonymous review."
+    summary_zh: "复杂约束下的生成式自动出价与强化学习。匿名评审期间有意隐去论文标题和技术细节。"
+
+  - id: project-b
+    label: "Project B"
+    venue: "KDD 2027"
+    role_en: "First author"
+    role_zh: "第一作者"
+    summary_en: "Semantic IDs and generative recommendation for e-commerce. The title and technical details are intentionally withheld during anonymous review."
+    summary_zh: "面向电商生成式推荐的 Semantic ID。匿名评审期间有意隐去论文标题和技术细节。"

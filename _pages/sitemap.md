@@ -1,37 +1,28 @@
 ---
 layout: archive
 title: "Sitemap"
+title_en: "Sitemap"
+title_zh: "网站地图"
+description: "Main pages on Mingming Zhang's academic homepage."
 permalink: /sitemap/
 author_profile: true
 ---
 
-{% include base_path %}
-
-A list of all the posts and pages found on the site. For you robots out there, there is an [XML version]({{ base_path }}/sitemap.xml) available for digesting as well.
-
-<h2>Pages</h2>
-{% for post in site.pages %}
-  {% include archive-single.html %}
-{% endfor %}
-
-<h2>Posts</h2>
-{% for post in site.posts %}
-  {% include archive-single.html %}
-{% endfor %}
-
-{% capture written_label %}'None'{% endcapture %}
-
-{% for collection in site.collections %}
-{% unless collection.output == false or collection.label == "posts" %}
-  {% capture label %}{{ collection.label }}{% endcapture %}
-  {% if label != written_label %}
-  <h2>{{ label }}</h2>
-  {% capture written_label %}{{ label }}{% endcapture %}
-  {% endif %}
-{% endunless %}
-{% for post in collection.docs %}
-  {% unless collection.output == false or collection.label == "posts" %}
-  {% include archive-single.html %}
-  {% endunless %}
-{% endfor %}
-{% endfor %}
+<div class="project-grid">
+  <article class="project-card" style="min-height:0;">
+    <div class="project-card__topline">00</div>
+    <h2 class="project-card__title"><a href="/"><span class="lang-en">Home</span><span class="lang-zh" style="display:none;">首页</span><span aria-hidden="true"> →</span></a></h2>
+  </article>
+  {% for link in site.data.navigation.main %}
+    <article class="project-card" style="min-height:0;">
+      <div class="project-card__topline">{{ forloop.index | prepend: '0' }}</div>
+      <h2 class="project-card__title">
+        <a href="{{ link.url }}">
+          <span class="lang-en">{{ link.title_en }}</span>
+          <span class="lang-zh" style="display:none;">{{ link.title_zh }}</span>
+          <span aria-hidden="true"> →</span>
+        </a>
+      </h2>
+    </article>
+  {% endfor %}
+</div>
