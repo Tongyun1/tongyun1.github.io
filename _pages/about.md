@@ -33,24 +33,6 @@ redirect_from:
   </div>
 </section>
 
-<div class="metric-strip" aria-label="Research highlights">
-  <div class="metric-strip__item">
-    <span class="metric-strip__value">SIGIR 2026</span>
-    <span class="metric-strip__label lang-en">Oral · First author</span>
-    <span class="metric-strip__label lang-zh" style="display:none;">Oral · 第一作者</span>
-  </div>
-  <div class="metric-strip__item">
-    <span class="metric-strip__value">KDD 2026</span>
-    <span class="metric-strip__label lang-en">Co-first author</span>
-    <span class="metric-strip__label lang-zh" style="display:none;">共同第一作者</span>
-  </div>
-  <div class="metric-strip__item">
-    <span class="metric-strip__value">EMNLP 2025</span>
-    <span class="metric-strip__label lang-en">Main Conference · Co-first author</span>
-    <span class="metric-strip__label lang-zh" style="display:none;">主会论文 · 共同第一作者</span>
-  </div>
-</div>
-
 <section class="profile-section" aria-labelledby="about-heading">
   <div class="section-heading">
     <div>
