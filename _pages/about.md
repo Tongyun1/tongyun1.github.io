@@ -16,7 +16,7 @@ redirect_from:
     <span class="lang-en">Researcher · Builder · Open-source contributor</span>
     <span class="lang-zh" style="display:none;">研究者 · 开发者 · 开源贡献者</span>
   </div>
-  <h1 id="profile-heading">
+  <h1 id="profile-heading" class="visually-hidden">
     <span class="lang-en">Mingming Zhang <span lang="zh-CN">张明鸣</span></span>
     <span class="lang-zh" style="display:none;">张明鸣 <span lang="en">Mingming Zhang</span></span>
   </h1>
