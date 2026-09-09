@@ -86,7 +86,6 @@
     if (employerEn || employerZh) {
       replaceIconLabel('.fa-building-columns', useZh ? employerZh : employerEn);
     }
-    replaceIconLabel('.fa-envelope', useZh ? '邮箱' : 'Email');
 
     var followButton = document.querySelector('.author__urls-wrapper > button');
     if (followButton) followButton.textContent = useZh ? '关注' : 'Follow';
