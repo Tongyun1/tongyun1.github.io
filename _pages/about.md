@@ -68,7 +68,7 @@ redirect_from:
     <li class="timeline__item">
       <span class="timeline__date">2026 · KDD</span>
       <span class="timeline__copy lang-en">Our work on Q-regularized generative auto-bidding was accepted to the research track.</span>
-      <span class="timeline__copy lang-zh" style="display:none;">Q 正则化生成式自动出价工作被研究赛道接收。</span>
+      <span class="timeline__copy lang-zh" style="display:none;">Q 正则化生成式自动出价工作被主会接收。</span>
     </li>
     <li class="timeline__item">
       <span class="timeline__date">2025 · EMNLP</span>

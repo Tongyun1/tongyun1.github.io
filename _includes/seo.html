@@ -91,13 +91,17 @@
 {% endif %}
 
 {% if site.social %}
+  {% assign seo_author_image = site.author.avatar %}
+  {% unless seo_author_image contains "://" %}
+    {% assign seo_author_image = seo_author_image | prepend: "/images/" | prepend: seo_url %}
+  {% endunless %}
   <script type="application/ld+json">
     {
       "@context" : "http://schema.org",
       "@type" : "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
       "name" : "{{ site.social.name | default: site.name }}",
       "url" : {{ seo_url | jsonify }},
-      "image" : {{ site.author.avatar | prepend: "/images/" | prepend: seo_url | jsonify }},
+      "image" : {{ seo_author_image | jsonify }},
       "jobTitle" : "Graduate Researcher",
       "affiliation" : {
         "@type" : "CollegeOrUniversity",

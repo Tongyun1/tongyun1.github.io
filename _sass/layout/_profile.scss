@@ -456,6 +456,14 @@ body {
   color: var(--muted-color);
 }
 
+.sidebar .author__urls li {
+  white-space: normal;
+}
+
+.sidebar .author__urls a {
+  overflow-wrap: anywhere;
+}
+
 .author__urls.is-open {
   display: block !important;
 }
